@@ -1,0 +1,11 @@
+.form {
+    align-self: center;
+    max-width: 100%;
+}
+
+.formcover {
+    width: 80%;
+    margin: 50px;
+    max-width: 100%;
+    justify-content: center;
+}
