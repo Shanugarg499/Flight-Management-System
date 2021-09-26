@@ -1,9 +1,6 @@
 import './Home.css';
 import {Carousel} from '3d-react-carousal';
 
-import slider from './slider.js';
-import Card from '../Card/Card.js';
-
 const Home = () => {
     let slides = [
         <img src= "https://source.unsplash.com/1600x900/?trekking,mountain" alt="1" />,

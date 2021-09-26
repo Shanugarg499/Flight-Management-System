@@ -1,5 +1,4 @@
-import './Contact.css'
-import * as rb from 'react-bootstrap';
+import './Contact.css';
 
 const Contact = () => {
     return (
