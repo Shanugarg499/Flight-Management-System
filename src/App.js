@@ -7,6 +7,7 @@ import Book from './Book/Book';
 import Status from './Status/Status';
 import Contact from './Contact/Contact';
 import Login from './Login/Login';
+import {Footer} from './Footer/Footer';
 
 function App() {
   const[active, setActive] = useState('Home');
@@ -15,7 +16,7 @@ function App() {
     <>
 
       <section className="mainview">
-        <rb.Navbar bg="white" expand="lg">
+        <rb.Navbar bg="white" expand="md">
           <rb.Container fluid>
           <button className="NavButton mainlogo" onClick={() => setActive('Home')} > <img style={{width: 75, height: 52}} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZXMaOIDN4jt7wlP8bvLnUMupB7z459qW3vQ&usqp=CAU" alt='Lala Airlines' /> </button>
             <rb.Navbar.Toggle aria-controls="navbarScroll" />
@@ -36,9 +37,7 @@ function App() {
       {active === 'Status' && <Status />}
       {active === 'Contact' && <Contact />}
       {active === 'Login' && <Login />}
-      {/* <Card /> */}
-        
-      {/* <Footer /> */}
+      
     </>
   );
 }

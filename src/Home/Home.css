@@ -1,28 +1,7 @@
-.fullimg {
-    padding: 10px;
-    padding-top: 0px;
-    width: 1200px;
-    height: 400px;
-    max-width: 90%;
-    max-height: 50%;
-    align-self: center;
-
+.cor{
+    position: relative;
 }
 
-.ht200 {
-    height: 200px;
-}
-
-.centered_Img {
-    display: flex;
-    justify-content: center;
-}
-
-.margintwenty {
-    margin: 10px
-}
-
-.selfCentered {
-    align-self: center;
-    width: 90%;
+.footer{
+    position: relative;
 }
