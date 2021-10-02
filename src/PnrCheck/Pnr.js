@@ -12,7 +12,7 @@ export default function Pnr() {
 <label for="pnr"><b>PNR NO.</b></label><br />
     <input type="text"  className="up" placeholder="Enter pnr no." name="Pnr" required />
     <br />
-<button class="button">Button</button> 
+<button class="button">Enter</button> 
 </div>
 
 </div>
