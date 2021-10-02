@@ -2,15 +2,15 @@ import React from "react";
 
 import "../Footer/footer.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import {
-//   faYoutube,
-//   faFacebook,
-//   faTwitter,
-//   faInstagram,
-//   faLinkedin,
-//   faGoogle,
-//   faPinterest,
-// } from "@fortawesome/free-brands-svg-icons";
+ import {
+   faYoutube,
+   faFacebook,
+   faTwitter,
+   faInstagram,
+   faLinkedin,
+   faGoogle,
+   faPinterest,
+ } from "@fortawesome/free-brands-svg-icons";
 import { Link } from "react-router-dom";
 
 export const Footer = () => {
@@ -40,10 +40,10 @@ export const Footer = () => {
                     <a href ="/#contact">Contact</a>
                   </li>
                   <li>
-                    {/* <Link to="/">Home</Link> */}
+                  <a href ="/#home">Home</a>
                   </li>
                   <li>
-                    {/* <Link to="/testimonial">Testimonial</Link> */}
+                  <a href ="/#testimonial">Testimonial</a>
                   </li>
                 </ul>
               </div>
@@ -77,7 +77,7 @@ export const Footer = () => {
                     rel="noreferrer"
                   >
                     <FontAwesomeIcon
-                      // icon={faYoutube}
+                      icon={faYoutube}
                       size="1x"
                       className="youtube"
                     />
@@ -89,7 +89,7 @@ export const Footer = () => {
                     rel="noreferrer"
                   >
                     <FontAwesomeIcon
-                      // icon={faFacebook}
+                      icon={faFacebook}
                       size="1x"
                       className="facebook"
                     />
@@ -101,7 +101,7 @@ export const Footer = () => {
                     rel="noreferrer"
                   >
                     <FontAwesomeIcon
-                      // icon={faTwitter}
+                      icon={faTwitter}
                       size="1x"
                       className="twitter"
                     />
@@ -113,7 +113,7 @@ export const Footer = () => {
                     rel="noreferrer"
                   >
                     <FontAwesomeIcon
-                      // icon={faInstagram}
+                       icon={faInstagram}
                       size="1x"
                       className="instagram"
                     />
@@ -125,7 +125,7 @@ export const Footer = () => {
                     rel="noreferrer"
                   >
                     <FontAwesomeIcon
-                      // icon={faLinkedin}
+                       icon={faLinkedin}
                       size="1x"
                       className="linkedin"
                     />
@@ -137,7 +137,7 @@ export const Footer = () => {
                     rel="noreferrer"
                   >
                     <FontAwesomeIcon
-                      // icon={faGoogle}
+                       icon={faGoogle}
                       size="1x"
                       className="google"
                     />
@@ -149,7 +149,7 @@ export const Footer = () => {
                     rel="noreferrer"
                   >
                     <FontAwesomeIcon
-                      // icon={faPinterest}
+                       icon={faPinterest}
                       size="1x"
                       className="pinterest"
                     />
@@ -159,16 +159,6 @@ export const Footer = () => {
             </div>
           </div>
         </footer>
-      </div>
-      <div className="scroll-container">
-        <a href="#navbar1">
-          <button className="scroll-btn">
-            <img
-              src="https://img.icons8.com/color/48/000000/circled-up-2--v2.png"
-              alt="scroll up"
-            />
-          </button>
-        </a>
       </div>
     </>
   );
