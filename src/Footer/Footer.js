@@ -23,11 +23,11 @@ export const Footer = () => {
               <div className="footer-col logo_footer">
                 <img
                   className="footer__logo"
-                  src="Images/logo.png"
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZXMaOIDN4jt7wlP8bvLnUMupB7z459qW3vQ&usqp=CAU"
                   alt="loftyLogo"
                 />
                 <p className="copy">
-                  Copyright 2021 © Mooving Grills | All Rights Reverved.
+                  Copyright 2021 © Lala Airlines | All Rights Reverved.
                 </p>
               </div>
               <div className="footer-col">

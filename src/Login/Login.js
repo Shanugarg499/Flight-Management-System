@@ -27,9 +27,9 @@ const Login = () => {
             <br />
             <br />
             <br />
-            <rb.Button variant="secondary" onClick={()=> alert('Sorry! Currently account creation service is inactive. Try sometime later.')} >
+            {/* <rb.Button variant="secondary" onClick={()=> alert('Sorry! Currently account creation service is inactive. Try sometime later.')} >
                 New here ? Click to create New Account
-            </rb.Button>
+            </rb.Button> */}
             </rb.Form>
             </div>
         </>

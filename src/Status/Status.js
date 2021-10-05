@@ -1,5 +1,25 @@
+import '../Status/Status.css';
+
 const Status = () => {
-    return <h1>Here you'll get status of your flights</h1>
+    return (
+
+<>
+<div className = "back">
+<div className="centered">
+<div>
+<label for="pnr"><b>PNR NO.</b></label><br />
+    <input type="text"  className="up" placeholder="Enter pnr no." name="Pnr" required />
+    <br />
+<button class="button">Enter</button> 
+</div>
+
+</div>
+
+</div>
+
+</>
+
+    );
 };
 
 export default Status;
