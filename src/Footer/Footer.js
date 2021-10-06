@@ -1,6 +1,6 @@
 import React from "react";
 
-import "../Footer/footer.css";
+import "../Footer/Footer.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
  import {
    faYoutube,
