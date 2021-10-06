@@ -1,4 +1,5 @@
 import './Contact.css';
+import {Footer} from '../Footer/Footer.js';
 
 const Contact = () => {
     return (
@@ -7,7 +8,7 @@ const Contact = () => {
         <div className="centered">
             <>
                 <iframe
-                    src={"https://drive.google.com/file/d/1cySI2wXX6tT45az81VKMletWpMx-vCyk/view?usp=sharing"}
+                    src={"https://docs.google.com/presentation/d/1n4mApUcU5_xfBlrcZuXOuAyjSCdRmei3rdBuoE2exLo/edit#slide=id.p1"}
                     width="1080%"
                     height="600px"
                     frameBorder="0"
