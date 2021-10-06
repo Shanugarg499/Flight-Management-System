@@ -1,6 +1,6 @@
 import * as rb from 'react-bootstrap';
 import './Login.css';
-
+import { Footer } from '../Footer/Footer';
 const Login = () => {
     return (
         <>
@@ -32,6 +32,7 @@ const Login = () => {
             </rb.Button> */}
             </rb.Form>
             </div>
+            <Footer className='footer'/>
         </>
     );
 };

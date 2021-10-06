@@ -1,28 +1,31 @@
+import { faProductHunt } from '@fortawesome/free-brands-svg-icons';
 import '../Card/Card.css';
-import food from "../Images/landscape.jpg"; 
-export default function Card() {
-    return (
+import { Footer } from '../Footer/Footer';
+export default function Card(props) {
+  console.log(props);
+  return (
+<>
+
+    <div className="shift">
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
 
 
-<div className="shift">
-<div class="flip-card">
-  <div class="flip-card-inner">
-    <div class="flip-card-front">
+            <img className="card-image" src={props.product.img} alt="Logo" />
 
-
-    <img className="card-image" src={food} alt="Logo" />
+          </div>
+          <div class="flip-card-back">
+            <h1>HDFC BANK</h1>
+            <p>Credit / Debit  Card</p>
+            <p>Valid Today</p>
+          </div>
+        </div>
+      </div>
 
     </div>
-    <div class="flip-card-back">
-      <h1>John Doe</h1>
-      <p>Architect and Engineer</p>
-      <p>We love that guy</p>
-    </div>
-  </div>
-</div>
+   
+</>
 
-</div>
-
-
-    );
+  );
 }
