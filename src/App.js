@@ -22,7 +22,7 @@ function App() {
             <rb.Navbar.Toggle aria-controls="navbarScroll" />
             <rb.Navbar.Collapse id="navbarScroll">
               <rb.Nav navbarScroll >
-                <button className="NavButton" onClick={() => {setActive('Book'); }}>BOOK</button>
+                <button className="NavButton" onClick={() => {setActive('Book')}}>BOOK</button>
                 <button className="NavButton" onClick={() => {setActive('Status')}}>STATUS</button>
                 <button className="NavButton" onClick={() => {setActive('Contact')}}>CONTACT</button>
                 <button className="NavButton" onClick={() => {setActive('Login')}}>LOGIN</button> 
