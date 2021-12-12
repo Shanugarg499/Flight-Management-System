@@ -8,16 +8,28 @@ const bookseat = (passenger_details, transaction_details) => {
     
     try{
     
-      const db = firebase.firestore();  
+      const db = firebase.firestore();
       db.collection('payment_history').doc(passenger_details.user_id).set({[transaction_details.transaction_id]: transaction_details});
       
-      const data = {}
-      for(var i=0; i<passenger_details.seats.length; i++)
-        data[passenger_details.seats[i].seat_num] = passenger_details.user_id
-      db.collection(passenger_details.airways)
-        .doc(passenger_details.flight_date + passenger_details.flight_id)
-        .set(data)
-    
+      db.collection(passenger_details.airways).doc(passenger_details.flight_date + passenger_details.flight_id).get()
+      .then((ourdoc) => {
+        if(ourdoc.exists) {
+
+          for(var i=0; i<passenger_details.seats.length; i++)
+            db.collection(passenger_details.airways)
+              .doc(passenger_details.flight_date + passenger_details.flight_id)
+              .update({[passenger_details.seats[i].seat_num] : [passenger_details.user_id]})
+        } else {
+          
+          const data = {}
+          for(var i=0; i<passenger_details.seats.length; i++)
+            data[passenger_details.seats[i].seat_num] = passenger_details.user_id
+          db.collection(passenger_details.airways)
+            .doc(passenger_details.flight_date + passenger_details.flight_id)
+            .set(data)
+        }
+      })
+      
       } catch(e) {
       
       console.log("Hey there! There's error: "+e )
@@ -47,7 +59,7 @@ const Book = () => {
       },
       {
         type: 'B',
-        seat_num: '46a'
+        seat_num: '48a'
       } 
     ]
   }
