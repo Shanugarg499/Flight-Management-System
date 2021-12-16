@@ -58,7 +58,7 @@ const Login = () => {
             <br />
             {/* <rb.Button variant="primary" type="submit" className='submitbutton' onClick={() => adduser('Shanu Garg', '181220050@nitdelhi.ac.in', '9876543210', '9876543210')}>
                 Create test account
-            </rb.Button> */} // ye code ft jaata h just after function is invoked so, it's commented.
+            </rb.Button> */}
             </rb.Form>
             </div>
             {/* <Footer className='footer'/> */}
