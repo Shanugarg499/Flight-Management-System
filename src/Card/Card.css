@@ -54,16 +54,15 @@ max-width: 100%;
   
   /* Style the back side */
   .flip-card-back {
-	background-color: dodgerblue;
-	/* color: white; */
+
 	transform: rotateY(180deg);
   }
 
 
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 768px) {
 	.shift {
 	  width: 100%;
-	  display: block;
+	  display: inline-block;
 	  margin-left: 0px;
 	  margin-bottom: 10px;
 	}
@@ -71,7 +70,7 @@ max-width: 100%;
 		border-radius: 10px;
 		margin-bottom: 10px;
 		margin-top: 0px;
-	max-width: 50%;
+	    max-width: 50%;
 		height: 150px;
 	}
 	.flip-card {
