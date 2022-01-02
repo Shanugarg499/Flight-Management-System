@@ -1,7 +1,7 @@
 import './Home.css';
 import Card from '../Card/Card';
 import Cor from './Corousals/Cor';
-import { Footer } from '../Footer/Footer.js';
+// import { Footer } from '../Footer/Footer.js';
 
 
 const Home = () => {
@@ -77,5 +77,6 @@ const Home = () => {
         </>
     );
 };
+
 
 export default Home;

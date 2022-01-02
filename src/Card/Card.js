@@ -1,10 +1,6 @@
-import { faProductHunt } from '@fortawesome/free-brands-svg-icons';
 import '../Card/Card.css';
-import { Footer } from '../Footer/Footer';
 export default function Card(props) {
-  console.log(props);
   let color=props.product.color;
-  console.log(color);
   return (
 <>
 

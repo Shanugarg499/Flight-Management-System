@@ -1,13 +1,11 @@
 import { useState } from 'react';
 import './App.css';
 import * as rb from 'react-bootstrap';
-
 import Home from './Home/Home';
 import Book from './Book/Book';
 import Status from './Status/Status';
 import Contact from './Contact/Contact';
 import Login from './Login/Login';
-import {Footer} from './Footer/Footer';
 
 function App() {
   const[active, setActive] = useState('Home');
