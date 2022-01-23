@@ -6,107 +6,9 @@ import firebase from '../utils/firebase';
 import 'firebase/firestore';
 import { db } from "../utils/firebase";
 
-// const bookseat = (passenger_details, transaction_details) => {
-// var i=0;
-//   try {
-
-//     const db = firebase.firestore();
-//     db.collection("payment_history").doc(passenger_details.user_id).get()
-//       .then((snapShot) => {
-//         if (snapShot.exists) {
-//           db.collection('payment_history').doc(passenger_details.user_id).update({ [transaction_details.transaction_id]: transaction_details });
-//         }
-//         else {
-//           db.collection('payment_history').doc(passenger_details.user_id).set({ [transaction_details.transaction_id]: transaction_details });
-//         }
-//       })
-
-
-//     db.collection(passenger_details.airways).doc(passenger_details.flight_date + passenger_details.flight_id).get()
-//       .then((ourdoc) => {
-//         if (ourdoc.exists) {
-
-//           for ( i = 0; i < passenger_details.seats.length; i++)
-//             db.collection(passenger_details.airways)
-//               .doc(passenger_details.flight_date + passenger_details.flight_id)
-//               .update({ [passenger_details.seats[i].seat_num]: passenger_details.user_id })
-//         } else {
-
-
-//           for ( i = 0; i < passenger_details.seats.length; i++) {
-//             if (i === 0)
-//               db.collection(passenger_details.airways)
-//                 .doc(passenger_details.flight_date + passenger_details.flight_id)
-//                 .set({ [passenger_details.seats[i].seat_num]: passenger_details.user_id })
-
-//             else {
-//               db.collection(passenger_details.airways)
-//                 .doc(passenger_details.flight_date + passenger_details.flight_id)
-//                 .update({ [passenger_details.seats[i].seat_num]: passenger_details.user_id })
-//             }
-//           }
-//         }
-//       })
-
-//   } catch (e) {
-
-//     console.log("Hey there! There's error: " + e)
-//   }
-// }
-
-// function formAction() {
-
-//   const db = firebase.firestore();
-//   db.collection("trip").doc("jet").get()
-//   .then((snapShot)=>{
-//        console.log(snapShot);
-//   })
-
-//   const passenger = {
-//     name: document.getElementById("first_name").value + " " + document.getElementById("last_name").value,
-//     user_id: 'Shanu_garg11112021184529',
-//     airways: document.getElementById("flight").value,
-//     flight_date: document.getElementById("date").value,
-//     flight_id: '',
-//     gender: document.getElementById("gender").value,
-//     age: document.getElementById("age").value,
-//     email: document.getElementById("email").value,
-//     mobile_num: document.getElementById("mobile_num").value,
-//     type: document.getElementById("class").value,
-//     seats: [
-//       {
-
-//         seat_num: '47a'
-
-//       },
-//       {
-
-//         seat_num: '47b'
-//       },
-//       {
-
-//         seat_num: '47c'
-//       },
-//       {
-
-//         seat_num: '48d'
-//       }
-//     ]
-//   }
-//   const transaction = {
-//     user_id: 'Shanu_garg11112021184529',
-//     amount: '100000',
-//     transaction_id: 'transaction_id',
-//     method: 'credit card',
-//     date: '11112021',
-//     time: '181523'
-//   }
-//   bookseat(passenger, transaction);
-//   alert("Your Flight Has Been Booked")
-// }
-
-
-
+const getprice = (from, to, flight, standard) => {
+  return "todo";
+}
 
 const Book = () => {
   const [first_name, setName1] = useState("");
@@ -141,7 +43,7 @@ const Book = () => {
       })
       .then(() => {
        
-        alert("Your information has been submitted👍");
+        alert("Your information has been submitted👍", getprice(from, to, flight, class1));
       })
       .catch((error) => {
         alert(error.message);

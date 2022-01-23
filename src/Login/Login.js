@@ -1,34 +1,7 @@
 import * as rb from 'react-bootstrap';
 import './Login.css';
-// import firebase from '../utils/firebase';
-// import 'firebase/firestore';
+import {Footer} from '../Footer/Footer';
 
-// signup method
-
-// const adduser = (name, email, phone_num, password) => {
-    
-//     const date = new Date();
-//     const user_id = 'Shanu_garg'+date.getDate()+date.getMonth()+date.getFullYear()+date.getHours()+date.getMinutes()+date.getSeconds();
-//     const user_data = { name, email, phone_num, password  }
-//     const map_data = { [email] : user_id }
-//     const data_map = { [user_id] : email }
-
-  
-//     console.log('function called')
-//     const db = firebase.firestore();
-//     try{
-
-//         // console.log(map_data)
-//         db.collection('maps').doc('user_map').set(map_data);
-//         // console.log('done map_data')
-//         db.collection('users').doc(user_id).set(user_data);
-//         console.log('done user_data')
-//         db.collection('maps').doc('user_map').set(data_map);
-//         // console.log('done data_map')
-//     }catch(e) {
-//         console.log('Error: '+e)
-//     }
-//   }
 
 const Login = () => {
     return (
@@ -61,7 +34,7 @@ const Login = () => {
             </rb.Button> */}
             </rb.Form>
             </div>
-            {/* <Footer className='footer'/> */}
+            <Footer className='footer'/>
         </>
     );
 };

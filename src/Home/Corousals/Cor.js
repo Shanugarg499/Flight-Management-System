@@ -1,14 +1,16 @@
-import {Carousel} from '3d-react-carousal';
+import "./cor.css";
 
-export default function Cor() {
-    let slides = [
-        <img src= "https://source.unsplash.com/1600x900/?airport,aeroplane" alt="1" />,
-        <img src= "https://source.unsplash.com/1600x900/?sky,mountain" alt="2" />  ,
-        <img src="https://source.unsplash.com/1600x900/?waterfall,water,mountain" alt="3" />,
-        <img src="https://source.unsplash.com/1600x900/?nature,sky" alt="4" />   ];
+const Cor = () => {
     return (
-        <div>
-            <Carousel slides={slides} className='cor'/>
+        <div className="container">
+            <img src="https://images.pexels.com/photos/358220/pexels-photo-358220.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" className="container2" alt="Notebook"/>
+            <div className="content">
+                <h1>Heading</h1>
+                <p>Lorem ipsum..</p>
+                <button>click here</button>
+            </div>
         </div>
     )
 }
+
+export default Cor;
