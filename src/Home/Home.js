@@ -72,9 +72,6 @@ const Home = () => {
                         product={product} />
                 })}
             </div>
-            {/* <div>
-            <Footer/>
-            </div> */}
         </>
     );
 };
