@@ -1,5 +1,14 @@
 .container {
     position: relative;
+    background-image:
+    linear-gradient(to right, rgba(2,52, 253,0.85), rgba(255, 255, 255, 0.53)),
+    url('https://images.pexels.com/photos/358220/pexels-photo-358220.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+    width: 80%;
+    height: 400px;
+    background-size: cover;
+    color: white;
+    padding: 20px;
+   
   }
   
   .container2 {
@@ -13,7 +22,30 @@
     bottom: 0; /* At the bottom. Use top:0 to append it to the top */
     background: rgb(0, 0, 0); /* Fallback color */
     background: rgba(0, 0, 0, 0); /* Black background with 0.5 opacity */
-    color: black; /* Grey text */
+    color: white; /* Grey text */
+    /* text-shadow: 5px 8px black; */
     width: 100%; /* Full width */
     margin: 10px;
+  }
+  .container .btn {
+    border: 2px solid;
+    border-radius: 45px;
+    background-color: transparent;
+    color: white;
+    padding: 4px 28px;
+    font-size: 15px;
+    cursor: pointer;
+  }
+  .container .warning {
+    border-color: white;
+    color: white;
+  }
+  .container .btn:hover {
+    border: 2px solid;
+    border-radius: 45px;
+    background-color: rgb(82, 189, 237);
+    color: white;
+    padding: 4px 28px;
+    font-size: 15px;
+    cursor: pointer;
   }
