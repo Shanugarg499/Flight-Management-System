@@ -6,8 +6,11 @@ import Book from './Book/Book';
 import Status from './Status/Status';
 import Contact from './Contact/Contact';
 import Login from './Login/Login';
+// import ticket from './Ticket/ticket';
+
 
 function App() {
+
   const[active, setActive] = useState('Home');
   // setActive('Home')
   return (
@@ -40,4 +43,4 @@ function App() {
   );
 }
 
-export default App;
+export {App};

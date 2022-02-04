@@ -5,9 +5,20 @@ import * as rb from 'react-bootstrap';
 import firebase from '../utils/firebase';
 import 'firebase/firestore';
 import { db } from "../utils/firebase";
+import { firestore } from 'firebase/app';
 
-const getprice = (from, to, flight, standard) => {
-  return "todo";
+const getprice = async (from, to, flight, standard) => {
+  const snapShot = await db.collection("Fares").get();
+  try {
+    snapShot.docs.forEach(doc => {
+      if(doc.id == from) {
+        console.log(doc.data()[to][flight][standard]);
+        alert(doc.data()[to][flight][standard]);
+        }
+    })
+  } catch (error) {
+    alert("error");
+  }
 }
 
 const Book = () => {
@@ -42,8 +53,8 @@ const Book = () => {
         mobile:mobile
       })
       .then(() => {
-       
-        alert("Your information has been submitted👍", getprice(from, to, flight, class1));
+        alert("Your information is submitted to our DB");
+        getprice(from, to, flight, class1);
       })
       .catch((error) => {
         alert(error.message);
@@ -61,6 +72,8 @@ const Book = () => {
     setFlight("");
     setEmail("");
     setMobile("");
+
+    
   };
 
 
@@ -205,6 +218,7 @@ const Book = () => {
                   <option>IndiGo</option>
                   <option>Air India</option>
                   <option>Vistara</option>
+                  <option>Jet Airways</option>
                 </select>
               </div>
             </div>
