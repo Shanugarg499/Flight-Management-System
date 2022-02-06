@@ -13,14 +13,14 @@ body {
   background: #fbfbfb;
   box-shadow: 2px 2px 15px 0px #ab9b0d;
 
-  &:before,
+  /* &:before,
   &:after {
     content: "";
     position: absolute;
     left: 5px;
     height: 6px;
     width: 290px;
-  }
+  } */
 
   &:before {
     top: -5px;
