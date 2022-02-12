@@ -1,6 +1,8 @@
 import React from "react";
 import "./Contact.css";
 import { Footer } from "../Footer/Footer";
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+
 function Contact() {
   return (
     <div className="about-body">
@@ -18,7 +20,7 @@ function Contact() {
             </div>
 
             <div className="div-1-bottom">
-              <h3 className="div-1-name"> Shanu Garg </h3>
+              <h3 className="div-1-name"> Shanu Garg <a href="https://www.linkedin.com/in/shanu-garg-a46672190/" target="_blank"><LinkedInIcon /></a></h3>
                <a href="https://www.linkedin.com/in/shanu-garg-a46672190/" target="_blank" />
               <h5 className="div-1-position"> {"Founder & CEO"} </h5>
               <p className="div-1-story">
@@ -33,7 +35,7 @@ function Contact() {
             </div>
 
             <div className="div-1-bottom">
-              <h3 className="div-1-name"> Nitesh Gupta</h3>
+              <h3 className="div-1-name"> Nitesh Gupta <a href="https://www.linkedin.com/in/nitesh-gupta-37868b193/" target="_blank"><LinkedInIcon /></a></h3>
               <h5 className="div-1-position"> {"Founder & CEO"} </h5> 
               <p className="div-1-story">
               Hello, I am Nitesh Gupta, and I will complete my B-Tech degree from the National Institute of Technology Delhi in 2022 and will work @ Bombinate Technologies (Koo App product specific) for SDE role.
