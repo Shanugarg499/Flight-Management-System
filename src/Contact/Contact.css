@@ -1,6 +1,98 @@
-.centered {
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@200&display=swap');
+
+.about-body {
+    width: 100%;
+    height: 100%;
+
+
+}
+
+.about-top {
+    width: 100%;
+    height: auto;
+    bottom: 0;
+
+}
+
+.about-h1 {
+    font-size: 60px;
+    text-align: center;
+    color: white;
+    font-family: 'Spartan', sans-serif;
+
+    background: rgba(2,52, 253,0.65);
+    width: 100%;
+    height: 300px;
     display: flex;
+    align-items: center;
     justify-content: center;
-    padding: 10%;
-    width: 100%
+}
+
+.about-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background-color: white;
+}
+
+.div-1 {
+    background-color: white;
+    border-radius: 20px;
+    width: 47%;
+    height: 600px;
+    margin: 7px;
+    position: relative;
+    box-shadow: white;
+    border: 2px solid #a7b4c1;
+    margin-left: 9px;
+}
+
+.div-1 img {
+    width: 200px;
+    height: 200px;
+    margin: 8px 0 0 0;
+    border-radius: 50%;
+
+    object-fit: cover;
+    box-shadow: 4px 10px 8px 0px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+
+}
+
+.div-1-top {
+    background-color: transparent;
+    height: 35%;
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+
+    border-radius: 10px;
+}
+
+
+.div-1-name {
+    color: black;
+    font-size: 30px;
+    text-align: center;
+}
+
+.div-1-position {
+    color: rgb(3, 68, 151);
+    font-size: 24px;
+    text-align: center;
+}
+
+.div-1-story {
+    color: black;
+    font-size: 17px;
+    height: 30px;
+    text-align: center;
+    margin: 5px;
+}
+
+@media screen and (max-width: 700px) {
+    .div-1 {
+        width: 100%;
+    }
+
 }

@@ -8,7 +8,7 @@ const Cor = () => {
             <div className="content">
                 <h3><strong>LALA AIRLINES SERVING FOR YEARS</strong></h3>
                 <h4>Providing Services To Travelers At Affordable Prices</h4>
-                <button className="btn warning">Presentation</button>
+                <button className="btn warning"><a href="https://docs.google.com/presentation/d/1n4mApUcU5_xfBlrcZuXOuAyjSCdRmei3rdBuoE2exLo/edit#slide=id.p1https://docs.google.com/presentation/d/1n4mApUcU5_xfBlrcZuXOuAyjSCdRmei3rdBuoE2exLo/edit#slide=id.p1" target="_blank" style={{textDecoration:"none",color:"white"}}><b>Presentation</b></a></button>
             </div>
         </div>
     )

@@ -36,4 +36,4 @@ export default function App1() {
 
 
 
-ReactDOM.render(<App1 /> , document.getElementById('root'));
+ReactDOM.render(<App /> , document.getElementById('root'));
