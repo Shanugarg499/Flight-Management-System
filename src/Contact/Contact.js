@@ -1,6 +1,7 @@
 import React from "react";
 import "./Contact.css";
 import { Footer } from "../Footer/Footer";
+// import LinkedInIcon from '@mui/icons-material/LinkedIn';
 function Contact() {
   return (
     <div className="about-body">
@@ -14,48 +15,29 @@ function Contact() {
         <div className="about-wrapper">
           <div className="div-1">
             <div className="div-1-top">
-              <img  alt ="Ashutosh Tripahthi" src="https://media-exp1.licdn.com/dms/image/C5635AQHgGlELq2Kniw/profile-framedphoto-shrink_400_400/0/1616426426486?e=1617613200&v=beta&t=V-l67Zme_1ErGLPMdvLLMildvxX3wzYn74er_EXl11o" />
+              <img  alt ="Shanu Garg" src="https://media-exp1.licdn.com/dms/image/C4E03AQFH1nmm7Yc8Sg/profile-displayphoto-shrink_400_400/0/1615449033001?e=1649894400&v=beta&t=_GYoz33yqTE5b-j-kDzWyB-O9Fq0fRNLFBLG-1E_IZg" />
             </div>
 
             <div className="div-1-bottom">
-              <h3 className="div-1-name"> Ashutosh Tripathi </h3>
-              <h5 className="div-1-position"> Founder </h5>
+              <h3 className="div-1-name"> Shanu Garg </h3>
+               {/* <a href="https://www.linkedin.com/in/shanu-garg-a46672190/" target="_blank"><LinkedInIcon/></a> */}
+              <h5 className="div-1-position"> {"Founder & CEO"} </h5>
               <p className="div-1-story">
-                {" "}
-                with over 300k subscribers. After graduating with a degree in
-                Mathematics from the University of Pennsylvania in May 2016, he
-                decided to learn programming and to enroll in Fullstack Academy,
-                an immersive coding bootcamp in New York City. While there, he
-                fell in love with full-stack development and algorithm analysis.
-                Upon completion of the program, he dove deeper into the field of
-                algorithms and aced the Google interviews. The frustration that
-                he felt during his interview prep led him to creating
-                AlgoExpert. He used AlgoExpert to prepare for the Facebook
-                interviews; unsurprisingly, he aced them!{" "}
+                Hi, I'm Shanu Garg, engineer, an investor, youtuber, chess player with 1800+ rating, completing my graduation in 2022 @ NIT Delhi and join Analog Devices as an Software Engineer.
               </p>
             </div>
           </div>
           
           <div className="div-1">
             <div className="div-1-top">
-              <img  alt ="Nitesh Gupta" src="https://media-exp1.licdn.com/dms/image/C5603AQHbE-Z6HCjF2g/profile-displayphoto-shrink_400_400/0/1616784106774?e=1623283200&v=beta&t=pEnF1uZRb9f4bwyU6_BroXS52lB6KcEIHp5kwOL1bns" />
+              <img  alt ="Nitesh Gupta" src="https://media-exp1.licdn.com/dms/image/C5603AQH09_NphFSy3w/profile-displayphoto-shrink_400_400/0/1641558474761?e=1649894400&v=beta&t=u9Q6-DyMc_H__fY1Sk8HCnm6QUohCXFyw4ihW9dRRkQ" />
             </div>
 
             <div className="div-1-bottom">
-              <h3 className="div-1-name"> NItesh Gupta</h3>
-              <h5 className="div-1-position"> Co-Founder </h5>
+              <h3 className="div-1-name"> Nitesh Gupta</h3>
+              <h5 className="div-1-position"> {"Founder & CEO"} </h5> 
               <p className="div-1-story">
-                {" "}
-                with over 300k subscribers. After graduating with a degree in
-                Mathematics from the University of Pennsylvania in May 2016, he
-                decided to learn programming and to enroll in Fullstack Academy,
-                an immersive coding bootcamp in New York City. While there, he
-                fell in love with full-stack development and algorithm analysis.
-                Upon completion of the program, he dove deeper into the field of
-                algorithms and aced the Google interviews. The frustration that
-                he felt during his interview prep led him to creating
-                AlgoExpert. He used AlgoExpert to prepare for the Facebook
-                interviews; unsurprisingly, he aced them!{" "}
+              Hello, I am Nitesh Gupta, and I will complete my B-Tech degree from the National Institute of Technology Delhi in 2022 and will work @ Bombinate Technologies (Koo App product specific) for SDE role.
               </p>
             </div>
           </div>
