@@ -1,7 +1,6 @@
 import React from "react";
 import "./Contact.css";
 import { Footer } from "../Footer/Footer";
-// import LinkedInIcon from '@mui/icons-material/LinkedIn';
 function Contact() {
   return (
     <div className="about-body">
@@ -20,7 +19,7 @@ function Contact() {
 
             <div className="div-1-bottom">
               <h3 className="div-1-name"> Shanu Garg </h3>
-               {/* <a href="https://www.linkedin.com/in/shanu-garg-a46672190/" target="_blank"><LinkedInIcon/></a> */}
+               <a href="https://www.linkedin.com/in/shanu-garg-a46672190/" target="_blank" />
               <h5 className="div-1-position"> {"Founder & CEO"} </h5>
               <p className="div-1-story">
                 Hi, I'm Shanu Garg, engineer, an investor, youtuber, chess player with 1800+ rating, completing my graduation in 2022 @ NIT Delhi and join Analog Devices as an Software Engineer.

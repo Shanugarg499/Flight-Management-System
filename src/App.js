@@ -6,6 +6,7 @@ import Book from './Book/Book';
 import Status from './Status/Status';
 import Contact from './Contact/Contact';
 import Login from './Login/Login';
+import Register from './Register/Register';
 // import ticket from './Ticket/ticket';
 
 
@@ -27,6 +28,7 @@ function App() {
                 <button className="NavButton" onClick={() => {setActive('Status')}}>STATUS</button>
                 <button className="NavButton" onClick={() => {setActive('Contact')}}>CONTACT</button>
                 <button className="NavButton" onClick={() => {setActive('Login')}}>LOGIN</button> 
+                <button className="NavButton" onClick={() => {setActive('Register')}}>REGISTER</button> 
               </rb.Nav>
             </rb.Navbar.Collapse>
           </rb.Container>
@@ -38,6 +40,7 @@ function App() {
       {active === 'Status' && <Status />}
       {active === 'Contact' && <Contact />}
       {active === 'Login' && <Login />}
+      {active === 'Register' && <Register />}
       
     </>
   );
