@@ -5,3 +5,8 @@
 .footer{
     position: relative;
 }
+.specialOffer{
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    font-size: 60px;
+}

@@ -1,5 +1,7 @@
 import '../Card/Card.css';
-export default function Card(props) {
+
+
+function Card(props) {
   let color=props.product.color;
   return (
 <>
@@ -26,4 +28,5 @@ export default function Card(props) {
 </>
 
   );
-}
+};
+export default Card;

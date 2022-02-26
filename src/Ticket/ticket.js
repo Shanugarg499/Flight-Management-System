@@ -7,7 +7,7 @@ function Ticket() {
     <div>
         <div className="ticket">
             <div className="ticket__content">
-                <p className="ticket__text">Pure CSS Ticket</p>
+                <p className="ticket__text">Lala Airlines</p>
             </div>
         </div>
     </div>;

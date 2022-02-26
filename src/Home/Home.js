@@ -1,9 +1,10 @@
 import './Home.css';
 import Card from '../Card/Card';
 import Cor from './Corousals/Cor';
+import {Footer} from '../Footer/Footer';
 
 
-const Home = () => {
+function Home  () {
     const state = {
         products: [
             {
@@ -66,11 +67,15 @@ const Home = () => {
         <>
             <div className='home'>
                 <Cor/>
-                {state.products.map((product) => {
+              
+            </div>
+       
+     <h1 className='specialOffer'>Special Offers</h1>
+        {state.products.map((product) => {
                     return <Card
                         product={product} />
                 })}
-            </div>
+                {/* <Footer /> */}
         </>
     );
 };
