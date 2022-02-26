@@ -69,12 +69,19 @@ function Home  () {
                 <Cor/>
               
             </div>
-       
+       <div className="gif-container">
+           <img src="https://firebasestorage.googleapis.com/v0/b/loftydreams-307f2.appspot.com/o/React-Images%2FWE%20ARE%20THE%20TRUSTED%20SELLER%20AT%20(1).gif?alt=media&token=0dd562e1-b1db-4880-bcb5-34dc5e55a198" />
+       </div>
      <h1 className='specialOffer'>Special Offers</h1>
+        <div className='cards-div'>
         {state.products.map((product) => {
                     return <Card
                         product={product} />
                 })}
+        </div>
+        <br>
+        </br>
+        {/* <h1 className='specialOffer'>Be part of us by signing up.</h1> */}
                 {/* <Footer /> */}
         </>
     );

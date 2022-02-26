@@ -9,4 +9,18 @@
     font-family: 'Roboto', sans-serif;
     text-align: center;
     font-size: 60px;
+    margin: 30px;
+}
+
+.card-div{
+    width: 100%;
+    margin: 50px;
+}
+
+
+
+.gif-container{
+    text-align: center;
+    margin-top: 50px;
+    width: 100%;
 }
