@@ -20,9 +20,6 @@ const Login = () => {
                 <rb.Form.Label>Password</rb.Form.Label>
                 <rb.Form.Control type="password" placeholder="Password" />
             </rb.Form.Group>
-            <rb.Form.Group className="mb-3" controlId="formBasicCheckbox">
-                <rb.Form.Check type="checkbox" label="Check me out" />
-            </rb.Form.Group>
             <rb.Button variant="primary" type="submit">
                 Submit
             </rb.Button>
