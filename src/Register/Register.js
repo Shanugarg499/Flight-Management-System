@@ -4,27 +4,14 @@ import './Register.css';
 import { Footer } from '../Footer/Footer';
 import { db } from "../utils/firebase";
 
-var isinvalidevent = async (name, pass, cpass, username) => {
-  if(name === "" || pass === "" || cpass === "" || username === "") {
-    alert("Empty field not allowed. Please try again.");
-    return;
-  }
-  if(typeof(pass) === 'string' && pass.length < 6) {
-    alert("Password length must be greater than 5");
-    return;
-  }
-  if(pass !== cpass) {
-    alert("Passwords not matching in both fields. Try again please.");
-    return;
-  }
+var getusers = async () => {
   try{
     const snapShot = await db.collection("user_register").get();
+    var users = [];
     snapShot.docs.forEach(doc => {
-      if(doc.data()["username"] === username) {
-        alert("Sorry This username is already taken. Try another.");
-        return;
-      }
+      users.add(doc.data()['username']);
     })
+    return users;
   } catch (err) {
     alert("Error connecting with DB. Please try again later.");
   }
@@ -37,10 +24,11 @@ function Register() {
     const [cpassword, setCpassword] = useState("");
     const [username, setUsername] = useState("");
     const [mobile, setMobile] = useState("");
+    var users = getusers();
 
     const handleSubmit = (e) => {
       e.preventDefault();
-      if(isinvalidevent(name, password, cpassword, username)) {
+      if(isinvalidevent(username)) {
         return;
       }
       db.collection("user_register")
