@@ -4,15 +4,16 @@ import './Register.css';
 import { Footer } from '../Footer/Footer';
 import { db } from "../utils/firebase";
 
-var getusers = async () => {
+async function getusers() {
   try{
     const snapShot = await db.collection("user_register").get();
     var users = [];
     snapShot.docs.forEach(doc => {
       users.push(doc.data()['username']);
     })
-    alert(users);
-    return users;
+    document.cookie = "";
+    console.log(users);
+    document.cookie = users;
   } catch (err) {
     alert(err);
   }
@@ -41,15 +42,18 @@ function Register() {
     const [cpassword, setCpassword] = useState("");
     const [username, setUsername] = useState("");
     const [mobile, setMobile] = useState("");
-    var users = getusers();
 
     const handleSubmit = (e) => {
       e.preventDefault();
       if(isinvalidevent(name, password, cpassword, username)) {
         return;
       }
-      var users = getusers();
-      // sleep
+      getusers();
+      var users = document.cookie;
+      if(users.indexOf(username) !== -1) {
+        alert("User already registered. Please use another username");
+        return;
+      }
       db.collection("user_register")
         .add({
           name, password, username, mobile
@@ -98,7 +102,7 @@ function Register() {
             <div class="row">
             </div>
               <div class="col">
-                <label for="inputEmail4" class="form-label">Email</label>
+                <label for="inputEmail4" class="form-label">Username</label>
                 <input
                  type="username"
                   class="form-control"
