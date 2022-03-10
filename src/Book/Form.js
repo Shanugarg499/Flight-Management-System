@@ -10,7 +10,6 @@ const getprice = async (from, to, flight, standard) => {
         if(doc.id == from) {
           console.log(doc.data()[to][flight][standard]);
           alert(doc.data()[to][flight][standard]);
-
           }
       })
     } catch (error) {

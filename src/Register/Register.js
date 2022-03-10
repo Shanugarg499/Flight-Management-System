@@ -4,26 +4,50 @@ import './Register.css';
 import { Footer } from '../Footer/Footer';
 import { db } from "../utils/firebase";
 
-
-
-
+var isinvalidevent = async (name, pass, cpass, username) => {
+  if(name === "" || pass === "" || cpass === "" || username === "") {
+    alert("Empty field not allowed. Please try again.");
+    return;
+  }
+  if(typeof(pass) === 'string' && pass.length < 6) {
+    alert("Password length must be greater than 5");
+    return;
+  }
+  if(pass !== cpass) {
+    alert("Passwords not matching in both fields. Try again please.");
+    return;
+  }
+  try{
+    const snapShot = await db.collection("user_register").get();
+    snapShot.docs.forEach(doc => {
+      if(doc.data()["username"] === username) {
+        alert("Sorry This username is already taken. Try another.");
+        return;
+      }
+    })
+  } catch (err) {
+    alert("Error connecting with DB. Please try again later.");
+  }
+}
 
 function Register() {
   
     const [name, setName] = useState("");
     const [password, setPassword] = useState("");
     const [cpassword, setCpassword] = useState("");
-    const [email, setEmail] = useState("");
+    const [username, setUsername] = useState("");
     const [mobile, setMobile] = useState("");
-  
+
     const handleSubmit = (e) => {
       e.preventDefault();
+      if(isinvalidevent(name, password, cpassword, username)) {
+        return;
+      }
       db.collection("user_register")
         .add({
           name: name,
           password:password,
-          cpassword:cpassword,
-          email:email,
+          username:username,
           mobile:mobile
         })
         .then(() => {
@@ -73,12 +97,12 @@ function Register() {
               <div class="col">
                 <label for="inputEmail4" class="form-label">Email</label>
                 <input
-                 type="email"
+                 type="username"
                   class="form-control"
-                   placeholder="email"
-                   value={email} 
+                   placeholder="username"
+                   value={username} 
                 onChange={(e)=>
-                setEmail(e.target.value)
+                setUsername(e.target.value)
                 }
                     />
               </div>
