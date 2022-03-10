@@ -63,7 +63,7 @@ function Home() {
       <div className="home">
         <Cor />
       </div>
-      <h1 className="specialOffer">We're well known for our trust and services.</h1>
+      <h1 className="specialOffer">Our Partners:</h1>
       <div>
         <img
           className="gif-container"
