@@ -145,6 +145,7 @@ function Register() {
           Register
         </rb.Button>
       </form>
+      <Footer />
     </>
 }
 

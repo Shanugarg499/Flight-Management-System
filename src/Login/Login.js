@@ -74,6 +74,7 @@ const Login = () => {
           Register
         </rb.Button>
       </form>
+      <Footer />
         </>
     );
 };
