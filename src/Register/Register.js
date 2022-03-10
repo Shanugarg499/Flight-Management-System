@@ -9,12 +9,29 @@ var getusers = async () => {
     const snapShot = await db.collection("user_register").get();
     var users = [];
     snapShot.docs.forEach(doc => {
-      users.add(doc.data()['username']);
+      users.push(doc.data()['username']);
     })
+    alert(users);
     return users;
   } catch (err) {
-    alert("Error connecting with DB. Please try again later.");
+    alert(err);
   }
+}
+
+var isinvalidevent = (name, pass, cpass, username) => {
+  if(name === '' || pass === '' || username === '') {
+    alert("Fields can't be empty");
+    return true;
+  }
+  if(pass.length < 6) {
+    alert("Password length must be greater than 5");
+    return true;
+  }
+  if(cpass != pass) {
+    alert("Password confirmation is not matching. Please try again");
+    return true;
+  }
+  return false;
 }
 
 function Register() {
@@ -28,19 +45,17 @@ function Register() {
 
     const handleSubmit = (e) => {
       e.preventDefault();
-      if(isinvalidevent(username)) {
+      if(isinvalidevent(name, password, cpassword, username)) {
         return;
       }
+      var users = getusers();
+      // sleep
       db.collection("user_register")
         .add({
-          name: name,
-          password:password,
-          username:username,
-          mobile:mobile
+          name, password, username, mobile
         })
         .then(() => {
           alert("Thanks For Registring");
-   
         })
         .catch((error) => {
           alert(error.message);
@@ -99,7 +114,7 @@ function Register() {
                 <input 
                 type="password" 
                 class="form-control"
-                  placeholder="password"
+                  placeholder="password of length atleast 6"
                   value={password} 
                 onChange={(e)=>
                 setPassword(e.target.value)
