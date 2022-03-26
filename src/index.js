@@ -27,13 +27,4 @@ export default function App1() {
 
 
 
-
-
-
-
-
-
-
-
-
 ReactDOM.render(<App /> , document.getElementById('root'));

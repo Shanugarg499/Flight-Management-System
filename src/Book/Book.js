@@ -6,6 +6,7 @@ import 'firebase/firestore';
 import Form from './Form';
 import Ticket from '../Ticket/ticket';
 import {Footer} from '../Footer/Footer';
+import Payment from '../Payment/Payment';
 
 
 const Book = () => {
@@ -15,7 +16,8 @@ const Book = () => {
   return (
     <>
       {active == "notBooked" && <Form obj={togRef} />}
-      {active == "Booked" && <Ticket obj={togRef}/>}
+      {active == "Booked" && <Payment obj={togRef}/>}
+   
       <Footer />
     </>
   );

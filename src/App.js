@@ -13,6 +13,7 @@ import Register from './Register/Register';
 function App() {
 
   const[active, setActive] = useState('Home');
+  
   // setActive('Home')
   return (
     <>
