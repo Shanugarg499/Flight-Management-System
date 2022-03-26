@@ -18,8 +18,8 @@ const getprice = async (from, to, flight, standard) => {
   }
   
 
-export default function Form(params) {
-  console.log(params[1]);
+export default function Form({ obj }) {
+  // console.log(params[1]);
     const [first_name, setName1] = useState("");
     const [last_name, setName2] = useState("");
     const [gender, setGender] = useState("");
@@ -31,10 +31,9 @@ export default function Form(params) {
     const [flight, setFlight] = useState("");
     const [email, setEmail] = useState("");
     const [mobile, setMobile] = useState("");
-  
+    
     const handleSubmit = (e) => {
       e.preventDefault();
-      
   
       db.collection("payment_history")
         .add({
@@ -51,15 +50,17 @@ export default function Form(params) {
           mobile:mobile
         })
         .then(() => {
-          alert("Your information is submitted to our DB");
-          getprice(from, to, flight, class1);
+          // alert("Your information is submitted to our DB");
+          // getprice(from, to, flight, class1);
         })
         .catch((error) => {
-          alert(error.message);
+          // alert(error.message);
        
         });
-  
-      
+        
+        var r = {obj}
+        var togglefunction = r.obj.current;
+        togglefunction('Booked')
     };
   
     return <>

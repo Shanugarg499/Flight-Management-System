@@ -12,7 +12,7 @@ async function validateuser(username, pass) {
             var cookie = document.cookie;
             document.cookie = cookie + username+"T";
             return;
-        }
+        } 
     });
 
 }

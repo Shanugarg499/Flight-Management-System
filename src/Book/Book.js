@@ -1,7 +1,6 @@
 import '../Book/Book.css';
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { db } from "../utils/firebase";
-import * as rb from 'react-bootstrap';
 import firebase from '../utils/firebase';
 import 'firebase/firestore';
 import Form from './Form';
@@ -11,13 +10,12 @@ import {Footer} from '../Footer/Footer';
 
 const Book = () => {
   const [active, setActive] = useState("notBooked");
+  
+  const togRef = useRef(setActive);
   return (
     <>
-      <rb.Button variant="primary" onClick={() => {if(active == 'notBooked') {setActive('Booked');} else {setActive('notBooked');}}} className='submitbutton'>
-          Toggle
-        </rb.Button>
-      {active == "notBooked" && <Form />}
-      {active == "Booked" && <Ticket />}
+      {active == "notBooked" && <Form obj={togRef} />}
+      {active == "Booked" && <Ticket obj={togRef}/>}
       <Footer />
     </>
   );
