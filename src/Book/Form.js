@@ -18,8 +18,15 @@ const getprice = async (from, to, flight, standard) => {
   }
   
 
-export default function Form({ obj }) {
+export default function Form({togObj, navbarObj}) { 
   // console.log(params[1]);
+  console.log("");
+  console.log("");
+  console.log("");
+  console.log("");
+  console.log("");
+  console.log('togObj object: ', togObj);
+  console.log("typeObj object: ", navbarObj)
     const [first_name, setName1] = useState("");
     const [last_name, setName2] = useState("");
     const [gender, setGender] = useState("");
@@ -58,9 +65,19 @@ export default function Form({ obj }) {
        
         });
         
-        var r = {obj}
-        var togglefunction = r.obj.current;
-        togglefunction('Booked')
+        var typeRef = {navbarObj};
+        // console.log(typeRef.obj);
+        try {
+          var toggleNavbar = typeRef.navbarObj.current;
+          console.log(toggleNavbar);
+        } catch (ex) {
+          console.log(ex);
+        }
+        toggleNavbar('notNavbar');
+        var r = {togObj}
+        var togglefunction = r.togObj.current;
+        console.log(togglefunction);
+        togglefunction('QRcode');
     };
   
     return <>

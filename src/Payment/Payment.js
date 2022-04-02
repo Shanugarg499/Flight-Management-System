@@ -12,7 +12,6 @@ export default function Payment({obj}) {
 
   return (
     <>
-   
       <div className='qwer'>
       <rb.Button variant="primary" onClick={() => {var backfunction = {obj}.obj.current; backfunction('notBooked');}}>
           <KeyboardBackspaceIcon />
@@ -20,14 +19,9 @@ export default function Payment({obj}) {
               <h1 className='adj'>Payment Gateway</h1>
           <img className='middle' src={paymentlogo} />     
           <div className="d-grid gap-2">
-          <button class="block" >Pay Now</button>
+          <button className='block' onClick={() => {var checkoutToTicket = {obj}.obj.current; checkoutToTicket('Ticket');}} >Pay Now</button>
 </div>
         </div>
     </>
-
- 
-
-
-  
   );
 }

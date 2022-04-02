@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import './App.css';
 import * as rb from 'react-bootstrap';
 import Home from './Home/Home';
@@ -13,12 +13,14 @@ import Register from './Register/Register';
 function App() {
 
   const[active, setActive] = useState('Home');
+  const [type, setType] = useState("Navbar");
+  const typeRef = useRef(setType);
   
   // setActive('Home')
   return (
     <>
 
-      <section className="mainview">
+      {type === 'Navbar' && <section className="mainview">
         <rb.Navbar bg="white" expand="md">
           <rb.Container fluid>
           <button className="NavButton mainlogo" onClick={() => setActive('Home')} > <img style={{width: 75, height: 52}} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZXMaOIDN4jt7wlP8bvLnUMupB7z459qW3vQ&usqp=CAU" alt='Lala Airlines' /> </button>
@@ -34,10 +36,10 @@ function App() {
             </rb.Navbar.Collapse>
           </rb.Container>
         </rb.Navbar>
-      </section>
+      </section>}
 
       {active === 'Home' && <Home />}
-      {active === 'Book' && <Book />}
+      {active === 'Book' && <Book typeObj={typeRef} />}
       {active === 'Status' && <Status />}
       {active === 'Contact' && <Contact />}
       {active === 'Login' && <Login />}
