@@ -7,16 +7,21 @@ import Form from './Form';
 import Ticket from '../Ticket/ticket';
 import {Footer} from '../Footer/Footer';
 import Payment from '../Payment/Payment';
+import { DataObject } from '@mui/icons-material';
 
 
-const Book = () => {
-  const [active, setActive] = useState("notBooked");
-  
+const Book = ({ typeObj }) => {
+  const [active, setActive] = useState("form");
+  console.log("typeObj here: ", typeObj);
+  console.log("");
+  console.log("");
+  console.log("");
   const togRef = useRef(setActive);
   return (
     <>
-      {active == "notBooked" && <Form obj={togRef} />}
-      {active == "Booked" && <Payment obj={togRef}/>}
+      {active == "form" && <Form togObj={togRef} navbarObj={typeObj} />}
+      {active == "QRcode" && <Payment obj={togRef}/>}
+      {active == "Ticket" && <Ticket togObj={togRef} navbarObj={typeObj} />}
    
       <Footer />
     </>
