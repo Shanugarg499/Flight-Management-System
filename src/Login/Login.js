@@ -37,7 +37,7 @@ const Login = () => {
 
     return (
         <>
-        <form onSubmit={handleSubmit}>
+        <form className="background2" onSubmit={handleSubmit}>
         <div className="formcover">
           <rb.Form className="form">
             <div class="row">

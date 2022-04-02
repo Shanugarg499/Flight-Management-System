@@ -100,7 +100,7 @@ export default function Form({togObj, navbarObj}) {
     };
   
     return <>
-      <form onSubmit={handleSubmit}>
+      <form className="background1" onSubmit={handleSubmit}>
         <div className="formcover">
           <rb.Form className="form">
             <div class="row g-3">
