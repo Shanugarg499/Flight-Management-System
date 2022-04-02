@@ -21,7 +21,7 @@ async function getusers() {
 
 var isinvalidevent = (name, pass, cpass, username, mobile) => {
   if(name === '' || pass === '' || username === '' || mobile === '') {
-    alert("Fields can't be empty");
+    alert("Required fields can't be empty");
     return true;
   }
   if(pass.length < 6) {
@@ -141,9 +141,7 @@ function Register() {
           </rb.Form>
         </div>
         {/* onClick={() => bookseat(passenger, transaction)} */}
-        <rb.Button variant="primary" type="submit" className='submitbutton'>
-          Register
-        </rb.Button>
+        <button variant="primary" type="submit" className="submitbutton" >Register</button>
       </form>
       <Footer />
     </>

@@ -8,9 +8,10 @@ const Status = () => {
 <div className="centered">
 <div>
 <label for="pnr"><b>PNR NO.</b></label><br />
-    <input type="text"  className="up" placeholder="Enter PNR No." name="Pnr" required />
+    <input type="text"  className="up" placeholder="Enter PNR No." name="Pnr" />
     <br />
-<button class="button">Enter</button> 
+
+<button variant="primary" type="submit" className="submitbutton" >Login</button>
 </div>
 
 </div>

@@ -29,7 +29,7 @@ const Login = () => {
         if(cookie.indexOf(username+'T') !== -1) {
             alert("You have logged in successfully");
         } else {
-            alert("Invalid creds"+username+password);
+            alert("Invalid credentials"+username+password);
             console.log(username);
             console.log(password);
         }
@@ -69,10 +69,7 @@ const Login = () => {
               
           </rb.Form>
         </div>
-        {/* onClick={() => bookseat(passenger, transaction)} */}
-        <rb.Button variant="primary" type="submit" className='submitbutton'>
-          Register
-        </rb.Button>
+        <button variant="primary" type="submit" className="submitbutton" >Login</button>
       </form>
       <Footer />
         </>

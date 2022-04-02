@@ -8,12 +8,12 @@ import './form.css';
 
 var isinvalidevent = (first_name, gender, age, from, to, date , class1, flight, email, mobile) => {
   if(first_name === '' || gender === '' || age === '' || from === '' || to ==='' || date === '' || class1 === '' || flight === '' || flight === '' || email === '' || mobile === '') {
-    alert("Fields can't be empty");
+    alert("Required fields can't be empty");
     return true;
   }
   if(from === to)
   {
-    alert("Source and Destination Are Not Same");
+    alert("Source and Destination are not same");
     return true;
   }
 }
@@ -254,10 +254,7 @@ export default function Form({ obj }) {
             </div>
           </rb.Form>
         </div>
-        {/* onClick={() => bookseat(passenger, transaction)} */}
-        <rb.Button variant="primary" type="submit" className='submitbutton'>
-          Submit
-        </rb.Button>
+        <button variant="primary" type="submit" className="submitbutton" >Book Now</button>
       </form>
     </>
 }
