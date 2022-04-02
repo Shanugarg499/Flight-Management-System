@@ -9,3 +9,27 @@
     max-width: 100%;
     justify-content: center;
 }
+.redMark{
+    color: red;
+}
+.submitbutton {
+    display: block;
+    width: 40%;
+    border: none;
+    border-radius: 15px;
+    background-color: blue;
+    color: white;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .submitbutton:hover {
+    background-color: rgb(82, 189, 237);
+    color: black;
+  }
