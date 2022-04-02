@@ -70,7 +70,7 @@ function Register() {
     };
   
     return <>
-      <form onSubmit={handleSubmit}>
+      <form className="background3" onSubmit={handleSubmit}>
         <div className="formcover">
           <rb.Form className="form">
             <div class="row g-6">
