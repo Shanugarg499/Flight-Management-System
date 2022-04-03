@@ -19,7 +19,7 @@ export default function Payment({obj}) {
               <h1 className='adj'>Payment Gateway</h1>
           <img className='middle' src={paymentlogo} />     
           <div className="d-grid gap-2">
-          <button className='block' onClick={() => {var checkoutToTicket = {obj}.obj.current; checkoutToTicket('Ticket');}} >Pay Now</button>
+          <button className='submitbutton' onClick={() => {var checkoutToTicket = {obj}.obj.current; checkoutToTicket('Ticket');}} >Pay Now</button>
 </div>
         </div>
     </>
