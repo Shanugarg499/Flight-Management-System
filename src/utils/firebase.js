@@ -1,6 +1,8 @@
 // for version 8 (currently)
 import firebase from 'firebase/app';
+import 'firebase/auth';
 import 'firebase/firestore';
+
 
 // for version 9
 // import firebase from 'firebase/compat/app';

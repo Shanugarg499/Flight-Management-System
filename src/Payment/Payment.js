@@ -6,14 +6,14 @@ import KeyboardBackspaceIcon from '@mui/icons-material/KeyboardBackspace';
 import Ticket from '../Ticket/ticket';
 
 
-export default function Payment({obj}) {
+export default function Payment({obj, navbarObj}) {
   
     
 
   return (
     <>
       <div className='qwer'>
-      <rb.Button variant="primary" onClick={() => {var backfunction = {obj}.obj.current; backfunction('notBooked');}}>
+      <rb.Button variant="primary" onClick={() => {var getnavbarBack = {navbarObj}.navbarObj.current; getnavbarBack('Navbar'); var backfunction = {obj}.obj.current; backfunction('form');}}>
           <KeyboardBackspaceIcon />
         </rb.Button>
               <h1 className='adj'>Payment Gateway</h1>

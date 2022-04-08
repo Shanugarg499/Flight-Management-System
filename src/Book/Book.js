@@ -20,7 +20,7 @@ const Book = ({ typeObj }) => {
   return (
     <>
       {active == "form" && <Form togObj={togRef} navbarObj={typeObj} />}
-      {active == "QRcode" && <Payment obj={togRef}/>}
+      {active == "QRcode" && <Payment obj={togRef} navbarObj={typeObj}/>}
       {active == "Ticket" && <Ticket togObj={togRef} navbarObj={typeObj} />}
    
       <Footer />
