@@ -29,7 +29,7 @@ const Login = () => {
         if(cookie.indexOf(username+'T') !== -1) {
             alert("You have logged in successfully");
         } else {
-            alert("Invalid creds"+username+password);
+            alert("Invalid credentials"+username+password);
             console.log(username);
             console.log(password);
         }
@@ -37,13 +37,13 @@ const Login = () => {
 
     return (
         <>
-        <form onSubmit={handleSubmit}>
+        <form className="background2" onSubmit={handleSubmit}>
         <div className="formcover">
           <rb.Form className="form">
             <div class="row">
             </div>
               <div class="col">
-                <label for="inputEmail4" class="form-label">Username</label>
+                <label for="inputEmail4" class="form-label">Username <b className="redMark">*</b></label>
                 <input
                  type="username"
                   class="form-control"
@@ -55,7 +55,7 @@ const Login = () => {
                     />
               </div>
               <div class="col">
-                <label for="inputEmail4" class="form-label">Password</label>
+                <label for="inputEmail4" class="form-label">Password <b className="redMark">*</b></label>
                 <input 
                 type="password" 
                 class="form-control"
@@ -69,10 +69,7 @@ const Login = () => {
               
           </rb.Form>
         </div>
-        {/* onClick={() => bookseat(passenger, transaction)} */}
-        <rb.Button variant="primary" type="submit" className='submitbutton'>
-          Register
-        </rb.Button>
+        <button variant="primary" type="submit" className="submitbutton" >Login</button>
       </form>
       <Footer />
         </>

@@ -19,9 +19,9 @@ async function getusers() {
   }
 }
 
-var isinvalidevent = (name, pass, cpass, username) => {
-  if(name === '' || pass === '' || username === '') {
-    alert("Fields can't be empty");
+var isinvalidevent = (name, pass, cpass, username, mobile) => {
+  if(name === '' || pass === '' || username === '' || mobile === '') {
+    alert("Required fields can't be empty");
     return true;
   }
   if(pass.length < 6) {
@@ -45,7 +45,7 @@ function Register() {
 
     const handleSubmit = (e) => {
       e.preventDefault();
-      if(isinvalidevent(name, password, cpassword, username)) {
+      if(isinvalidevent(name, password, cpassword, username,mobile)) {
         return;
       }
       getusers();
@@ -70,12 +70,12 @@ function Register() {
     };
   
     return <>
-      <form onSubmit={handleSubmit}>
+      <form className="background3" onSubmit={handleSubmit}>
         <div className="formcover">
           <rb.Form className="form">
             <div class="row g-6">
               <div class="col md-6">
-                <label for="inputEmail4" class="form-label">Name</label>
+                <label for="inputEmail4" class="form-label">Name <b className="redMark">*</b></label>
                 <input 
                 type="text" 
                 class="form-control" 
@@ -87,7 +87,7 @@ function Register() {
                 />
               </div>
               <div class="col md-6">
-              <label for="inputEmail4" class="form-label">Mobile No.</label>
+              <label for="inputEmail4" class="form-label">Mobile No. <b className="redMark">*</b></label>
                 <input 
                 type="mobile" 
                 class="form-control"
@@ -102,7 +102,7 @@ function Register() {
             <div class="row">
             </div>
               <div class="col">
-                <label for="inputEmail4" class="form-label">Username</label>
+                <label for="inputEmail4" class="form-label">Username <b className="redMark">*</b></label>
                 <input
                  type="username"
                   class="form-control"
@@ -114,7 +114,7 @@ function Register() {
                     />
               </div>
               <div class="col">
-                <label for="inputEmail4" class="form-label">Password</label>
+                <label for="inputEmail4" class="form-label">Password <b className="redMark">*</b></label>
                 <input 
                 type="password" 
                 class="form-control"
@@ -126,7 +126,7 @@ function Register() {
                    />
               </div>
               <div class="col">
-                <label for="inputEmail4" class="form-label">Confirm Password</label>
+                <label for="inputEmail4" class="form-label">Confirm Password <b className="redMark">*</b></label>
                 <input 
                 type="password" 
                 class="form-control"
@@ -141,9 +141,7 @@ function Register() {
           </rb.Form>
         </div>
         {/* onClick={() => bookseat(passenger, transaction)} */}
-        <rb.Button variant="primary" type="submit" className='submitbutton'>
-          Register
-        </rb.Button>
+        <button variant="primary" type="submit" className="submitbutton" >Register</button>
       </form>
       <Footer />
     </>

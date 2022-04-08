@@ -2,6 +2,21 @@ import React, { useState, useEffect } from "react";
 import { db } from "../utils/firebase";
 import { Footer } from '../Footer/Footer.js';
 import * as rb from 'react-bootstrap';
+import './form.css';
+
+
+
+var isinvalidevent = (first_name, gender, age, from, to, date , class1, flight, email, mobile) => {
+  if(first_name === '' || gender === '' || age === '' || from === '' || to ==='' || date === '' || class1 === '' || flight === '' || flight === '' || email === '' || mobile === '') {
+    alert("Required fields can't be empty");
+    return true;
+  }
+  if(from === to)
+  {
+    alert("Source and Destination are not same");
+    return true;
+  }
+}
 
 const getprice = async (from, to, flight, standard) => {
     const snapShot = await db.collection("Fares").get();
@@ -42,6 +57,10 @@ export default function Form({togObj, navbarObj}) {
     const handleSubmit = (e) => {
       e.preventDefault();
   
+      if(isinvalidevent(first_name, gender, age, from, to, date , class1, flight, email, mobile)) {
+        return;
+      }
+
       db.collection("payment_history")
         .add({
           first_name: first_name,
@@ -81,12 +100,12 @@ export default function Form({togObj, navbarObj}) {
     };
   
     return <>
-      <form onSubmit={handleSubmit}>
+      <form className="background1" onSubmit={handleSubmit}>
         <div className="formcover">
           <rb.Form className="form">
             <div class="row g-3">
               <div class="col">
-                <label for="inputEmail4" class="form-label">First Name</label>
+                <label for="inputEmail4" class="form-label">First Name <b className="redMark">*</b></label>
                 <input 
                 type="text" 
                 class="form-control" 
@@ -110,7 +129,7 @@ export default function Form({togObj, navbarObj}) {
                  />
               </div>
               <div class="col">
-                <label for="gender" class="form-label">Gender</label>
+                <label for="gender" class="form-label">Gender <b className="redMark">*</b></label>
                 <select 
                 class="form-control" 
                 value={gender}
@@ -127,7 +146,7 @@ export default function Form({togObj, navbarObj}) {
                 </select>
               </div>
               <div class="col">
-                <label for="inputEmail4" class="form-label">Age</label>
+                <label for="inputEmail4" class="form-label">Age <b className="redMark">*</b></label>
                 <input type="integer" 
                 class="form-control" 
                 placeholder="age" 
@@ -140,7 +159,7 @@ export default function Form({togObj, navbarObj}) {
             </div>
             <div class="row g-3">
               <div class="col">
-                <label for="from" class="form-label">From</label>
+                <label for="from" class="form-label">From <b className="redMark">*</b></label>
                 <select 
                  class="form-control"
                  value={from} 
@@ -158,7 +177,7 @@ export default function Form({togObj, navbarObj}) {
                 </select>
               </div>
               <div class="col">
-                <label for="to" class="form-label">To</label>
+                <label for="to" class="form-label">To <b className="redMark">*</b></label>
                 <select 
                 class="form-control"
                 value={to} 
@@ -178,7 +197,7 @@ export default function Form({togObj, navbarObj}) {
             </div>
             <div class="row g-3">
               <div class="col-sm-7">
-                <label for="inputEmail4" class="form-label">Date Of Journey</label>
+                <label for="inputEmail4" class="form-label">Date Of Journey <b className="redMark">*</b></label>
                 <input 
                 type="date"
                  class="form-control" 
@@ -190,7 +209,7 @@ export default function Form({togObj, navbarObj}) {
                  />
               </div>
               <div class="col-sm">
-                <label for="class" class="form-label">Class</label>
+                <label for="class" class="form-label">Class <b className="redMark">*</b></label>
                 <select
                 class="form-control"
                 value={class1} 
@@ -205,7 +224,7 @@ export default function Form({togObj, navbarObj}) {
                 </select>
               </div>
               <div class="col-sm">
-                <label for="flight" class="form-label">Flight Name</label>
+                <label for="flight" class="form-label">Flight Name <b className="redMark">*</b></label>
                 <select 
                 class="form-control"
                 value={flight} 
@@ -226,7 +245,7 @@ export default function Form({togObj, navbarObj}) {
             </div>
             <div class="row g-3">
               <div class="col-md-6">
-                <label for="inputEmail4" class="form-label">Email</label>
+                <label for="inputEmail4" class="form-label">Email <b className="redMark">*</b></label>
                 <input
                  type="email"
                   class="form-control"
@@ -238,7 +257,7 @@ export default function Form({togObj, navbarObj}) {
                     />
               </div>
               <div class="col-md-6">
-                <label for="inputEmail4" class="form-label">Mobile No.</label>
+                <label for="inputEmail4" class="form-label">Mobile No. <b className="redMark">*</b></label>
                 <input 
                 type="mobile" 
                 class="form-control"
@@ -252,10 +271,7 @@ export default function Form({togObj, navbarObj}) {
             </div>
           </rb.Form>
         </div>
-        {/* onClick={() => bookseat(passenger, transaction)} */}
-        <rb.Button variant="primary" type="submit" className='submitbutton'>
-          Submit
-        </rb.Button>
+        <button variant="primary" type="submit" className="submitbutton" >Book Now</button>
       </form>
     </>
 }
