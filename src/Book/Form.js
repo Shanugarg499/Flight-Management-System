@@ -7,15 +7,15 @@ import './form.css';
 
 
 var isinvalidevent = (first_name, gender, age, from, to, date , class1, flight, email, mobile) => {
-  if(first_name === '' || gender === '' || age === '' || from === '' || to ==='' || date === '' || class1 === '' || flight === '' || flight === '' || email === '' || mobile === '') {
-    alert("Required fields can't be empty");
-    return true;
-  }
-  if(from === to)
-  {
-    alert("Source and Destination are not same");
-    return true;
-  }
+  // if(first_name === '' || gender === '' || age === '' || from === '' || to ==='' || date === '' || class1 === '' || flight === '' || flight === '' || email === '' || mobile === '') {
+  //   alert("Required fields can't be empty");
+  //   return true;
+  // }
+  // if(from === to)
+  // {
+  //   alert("Source and Destination are not same");
+  //   return true;
+  // }
 }
 
 const getprice = async (from, to, flight, standard) => {
