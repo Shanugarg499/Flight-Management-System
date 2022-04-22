@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { db } from "../utils/firebase";
 import { Footer } from '../Footer/Footer.js';
+import {sleep} from '../utils/funs';
 import * as rb from 'react-bootstrap';
 import './form.css';
 
@@ -18,30 +19,27 @@ var isinvalidevent = (first_name, gender, age, from, to, date , class1, flight, 
   }
 }
 
-const getprice = async (from, to, flight, standard) => {
+const storePrice = async (from, to, flight, standard) => {
     const snapShot = await db.collection("Fares").get();
     try {
       snapShot.docs.forEach(doc => {
         if(doc.id == from) {
           console.log(doc.data()[to][flight][standard]);
-          alert(doc.data()[to][flight][standard]);
+          // alert(doc.data()[to][flight][standard]);
+          localStorage.setItem('price', doc.data()[to][flight][standard]);
+          console.log("store successfull");
           }
       })
     } catch (error) {
+      localStorage.setItem('price', 'Flight not available');
       alert("error");
+      console.log("store failed");
     }
   }
   
 
 export default function Form({togObj, navbarObj}) { 
   // console.log(params[1]);
-  console.log("");
-  console.log("");
-  console.log("");
-  console.log("");
-  console.log("");
-  console.log('togObj object: ', togObj);
-  console.log("typeObj object: ", navbarObj)
     const [first_name, setName1] = useState("");
     const [last_name, setName2] = useState("");
     const [gender, setGender] = useState("");
@@ -56,6 +54,7 @@ export default function Form({togObj, navbarObj}) {
     
     const handleSubmit = (e) => {
       e.preventDefault();
+      console.log("validating event");
   
       if(isinvalidevent(first_name, gender, age, from, to, date , class1, flight, email, mobile)) {
         return;
@@ -77,25 +76,26 @@ export default function Form({togObj, navbarObj}) {
         })
         .then(() => {
           // alert("Your information is submitted to our DB");
-          // getprice(from, to, flight, class1);
+          localStorage.setItem('booking_info', {first_name, last_name, gender, age, from, to, date, class1, flight, email, mobile});
+          storePrice(from, to, flight, class1);
+          console.log("done with storage function");
+          sleep(3000);
         })
         .catch((error) => {
           // alert(error.message);
-       
+          console.log(error);
         });
         
         var typeRef = {navbarObj};
         // console.log(typeRef.obj);
         try {
           var toggleNavbar = typeRef.navbarObj.current;
-          console.log(toggleNavbar);
         } catch (ex) {
           console.log(ex);
         }
         toggleNavbar('notNavbar');
         var r = {togObj}
         var togglefunction = r.togObj.current;
-        console.log(togglefunction);
         togglefunction('QRcode');
     };
   

@@ -12,10 +12,6 @@ import { DataObject } from '@mui/icons-material';
 
 const Book = ({ typeObj }) => {
   const [active, setActive] = useState("form");
-  console.log("typeObj here: ", typeObj);
-  console.log("");
-  console.log("");
-  console.log("");
   const togRef = useRef(setActive);
   return (
     <>
