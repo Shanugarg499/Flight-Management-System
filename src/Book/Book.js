@@ -12,12 +12,14 @@ import { DataObject } from '@mui/icons-material';
 
 const Book = ({ typeObj }) => {
   const [active, setActive] = useState("form");
+  const [PNR, setPNR] = useState('');
   const togRef = useRef(setActive);
+  const pnrRef = useRef(setPNR);
   return (
     <>
-      {active == "form" && <Form togObj={togRef} navbarObj={typeObj} />}
-      {active == "QRcode" && <Payment obj={togRef} navbarObj={typeObj}/>}
-      {active == "Ticket" && <Ticket togObj={togRef} navbarObj={typeObj} />}
+      {active == "form" && <Form togObj={togRef} navbarObj={typeObj}  />}
+      {active == "QRcode" && <Payment obj={togRef} navbarObj={typeObj} pnrObj={pnrRef}/>}
+      {active == "Ticket" && <Ticket togObj={togRef} navbarObj={typeObj} pnrNum={PNR} />}
    
       <Footer />
     </>

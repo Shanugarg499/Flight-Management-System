@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { db } from "../utils/firebase";
 import { Footer } from '../Footer/Footer.js';
 import {sleep} from '../utils/funs';
 import * as rb from 'react-bootstrap';
@@ -19,26 +18,8 @@ var isinvalidevent = (first_name, gender, age, from, to, date , class1, flight, 
   // }
 }
 
-const storePrice = async (from, to, flight, standard) => {
-    const snapShot = await db.collection("Fares").get();
-    try {
-      snapShot.docs.forEach(doc => {
-        if(doc.id == from) {
-          console.log(doc.data()[to][flight][standard]);
-          // alert(doc.data()[to][flight][standard]);
-          localStorage.setItem('price', doc.data()[to][flight][standard]);
-          console.log("store successfull");
-          }
-      })
-    } catch (error) {
-      localStorage.setItem('price', 'Flight not available');
-      alert("error");
-      console.log("store failed");
-    }
-  }
-  
 
-export default function Form({togObj, navbarObj}) { 
+export default function Form({togObj, navbarObj, pnrObj}) { 
   // console.log(params[1]);
     const [first_name, setName1] = useState("");
     const [last_name, setName2] = useState("");
@@ -59,32 +40,18 @@ export default function Form({togObj, navbarObj}) {
       if(isinvalidevent(first_name, gender, age, from, to, date , class1, flight, email, mobile)) {
         return;
       }
-
-      db.collection("payment_history")
-        .add({
-          first_name: first_name,
-          last_name:last_name,
-          gender:gender,
-          age:age,
-          from:from,
-          to:to,
-          date:date,
-          class:class1,
-          flight:flight,
-          email:email,
-          mobile:mobile
-        })
-        .then(() => {
-          // alert("Your information is submitted to our DB");
-          localStorage.setItem('booking_info', {first_name, last_name, gender, age, from, to, date, class1, flight, email, mobile});
-          storePrice(from, to, flight, class1);
-          console.log("done with storage function");
-          sleep(3000);
-        })
-        .catch((error) => {
-          // alert(error.message);
-          console.log(error);
-        });
+      
+      localStorage.setItem("first_name", first_name);
+      localStorage.setItem("last_name", last_name);
+      localStorage.setItem("age", age);
+      localStorage.setItem("gender", gender);
+      localStorage.setItem("from", from);
+      localStorage.setItem("to", to);
+      localStorage.setItem("date", date);
+      localStorage.setItem("class1", class1);
+      localStorage.setItem("flight", flight);
+      localStorage.setItem("email", email);
+      localStorage.setItem("mobile", mobile);
         
         var typeRef = {navbarObj};
         // console.log(typeRef.obj);
