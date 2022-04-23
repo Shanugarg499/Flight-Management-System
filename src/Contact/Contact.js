@@ -2,7 +2,8 @@ import React from "react";
 import "./Contact.css";
 import { Footer } from "../Footer/Footer";
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-
+import nitesh from "../Images/niteshgupta.jpg";
+import shanu from "../Images/shanugarg.jpg";
 function Contact() {
   return (
     <div className="about-body">
@@ -16,7 +17,7 @@ function Contact() {
         <div className="about-wrapper">
           <div className="div-1">
             <div className="div-1-top">
-              <img  alt ="Shanu Garg" src="https://media-exp1.licdn.com/dms/image/C4E03AQFH1nmm7Yc8Sg/profile-displayphoto-shrink_400_400/0/1615449033001?e=1649894400&v=beta&t=_GYoz33yqTE5b-j-kDzWyB-O9Fq0fRNLFBLG-1E_IZg" />
+              <img  alt ="Shanu Garg" src={shanu} />
             </div>
 
             <div className="div-1-bottom">
@@ -31,7 +32,7 @@ function Contact() {
           
           <div className="div-1">
             <div className="div-1-top">
-              <img  alt ="Nitesh Gupta" src="https://media-exp1.licdn.com/dms/image/C5603AQH09_NphFSy3w/profile-displayphoto-shrink_400_400/0/1641558474761?e=1649894400&v=beta&t=u9Q6-DyMc_H__fY1Sk8HCnm6QUohCXFyw4ihW9dRRkQ" />
+              <img  alt ="Nitesh Gupta" src={nitesh} />
             </div>
 
             <div className="div-1-bottom">
