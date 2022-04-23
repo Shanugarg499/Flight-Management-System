@@ -3,7 +3,7 @@ import "./Contact.css";
 import { Footer } from "../Footer/Footer";
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import nitesh from "../Images/niteshgupta.jpg";
-import shanu from "../Images/shanugarg.jpg";
+import shanu from "../Images/shanugarg.jfif";
 function Contact() {
   return (
     <div className="about-body">
