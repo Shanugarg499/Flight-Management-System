@@ -1,20 +1,36 @@
 import '../Status/Status.css';
 import { Footer } from '../Footer/Footer';
 import { db } from "../utils/firebase";
-import {doc} from 'firebase/firestore';
+import {doc, getDoc} from 'firebase/firestore';
 import {useState} from 'react';
 
 
 async function printTicketInfo(pnrNum) {
     try {
         console.log("inside print fun");
-        const docRef = doc(db, 'payment_history', {pnrNum});
-        if (docRef.exists())
-            console.log(docRef.data());
-        else
-            console.log("Status couldn't be found");
+        var docRef = db.collection('payment_history').doc(pnrNum);
+        docRef.get().then((doc) => {
+            if (doc.exists) {
+                console.log("Status:", doc.data());
+            } else {
+                console.log("No such PNR found!");
+            }
+        }).catch((error) => {
+            console.log("Error getting document:", error);
+        });
     } catch (error) {
-        console.log(error);
+        try {
+            const docRef = doc(db, "cities", "SF");
+            const docSnap = await getDoc(docRef);
+
+            if (docSnap.exists()) {
+            console.log("Document data:", docSnap.data());
+            } else {
+            console.log("No such document!");
+            }
+        } catch (error2) {
+            console.log(error2);
+        }
     }
   }
 
@@ -24,7 +40,7 @@ const Status = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log('inside submit fun');
+        console.log('inside submit');
         printTicketInfo(pnrNum);
     }
 
