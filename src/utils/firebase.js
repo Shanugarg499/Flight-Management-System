@@ -5,9 +5,9 @@
 
 
 // for version 9
-// import firebase from 'firebase/compat/app';
-// import 'firebase/compat/auth';
-// import 'firebase/compat/firestore';
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/auth';
+import 'firebase/compat/firestore';
 
 // const firebaseConfig = {
 //   apiKey: "AIzaSyACpnqHjsGGZfNG3pB_YtcSFXyl1e_uUvU",
