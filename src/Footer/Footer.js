@@ -1,5 +1,5 @@
 import React from "react";
-
+import logo from '../Images/logo.jpg';
 import "../Footer/Footer.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
  import {
@@ -23,7 +23,7 @@ export const Footer = () => {
               <div className="footer-col logo_footer">
                 <img
                   className="footer__logo"
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZXMaOIDN4jt7wlP8bvLnUMupB7z459qW3vQ&usqp=CAU"
+                  src={logo}
                   alt="loftyLogo"
                 />
                 <p className="copy">

@@ -29,16 +29,20 @@ function Ticket({togObj, navbarObj, pnrNum}) {
         <div className="ticket">
        
             <div className="ticket__content">
-                 <p className='green_color'><b>Ticket Confirmed</b></p>
-        
-                  <p className='shift1'><b>{from}  <DoubleArrowIcon/>      {to}</b></p>
-                  <p className='shift1'><b>PNR:</b> {pnrNum}</p>
+           
+            <p className='green_color'><b>Ticket Confirmed</b></p>
+            <p className='check'>
+        <p className='shift1'><b>{from}  <DoubleArrowIcon/>      {to}</b></p>
+        <p className='shift1'><b>PNR:</b> {pnrNum}</p>
 
-                 <p><b>PASSENGER NAME:</b> {f_name} {l_name} , {age} , {gender} </p>
-                 <p><b>DATE OF JOURNEY:</b> {date}</p>
-               
-                <p><b>SEAT:</b> F-{seat} , {class1}</p>
-                <p><b>PRICE:</b> {price}</p>
+       <p><b>PASSENGER NAME:</b> {f_name} {l_name} , {age} , {gender} </p>
+       <p><b>DATE OF JOURNEY:</b> {date}</p>
+     
+      <p><b>SEAT:</b> F-{seat} , {class1}</p>
+      <p><b>PRICE:</b> {price}</p>
+
+    </p>
+
               
             </div>
         </div>

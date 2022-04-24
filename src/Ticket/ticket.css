@@ -44,3 +44,10 @@ body {
    text-align: center;
    font-size: 20px;
  }
+
+ .check{
+   background-image: url(../Images/bglogo.png);
+   background-position: center;
+    background-repeat: no-repeat;
+ 
+ }
