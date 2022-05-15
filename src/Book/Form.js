@@ -4,6 +4,16 @@ import {sleep} from '../utils/funs';
 import * as rb from 'react-bootstrap';
 import './form.css';
 
+var isSpaceInName = (name)=>
+{
+  for(var i=0;name[i]!='\0';i++)
+  {
+    if(name[i]== ' ') return true;
+  }
+  return false;
+}
+
+
 var isinvalidevent = (first_name, gender, age, from, to, date , class1, flight, email, mobile) => {
   if(first_name === '' || gender === '' || age === '' || from === '' || to ==='' || date === '' || class1 === '' || flight === '' || flight === '' || email === '' || mobile === '') {
     alert("Required fields can't be empty");
@@ -14,6 +24,17 @@ var isinvalidevent = (first_name, gender, age, from, to, date , class1, flight, 
     alert("Source and Destination are not same");
     return true;
   }
+  if(flight !="JetAirways") 
+  {
+    alert("Flights Not Available");
+    return true;
+  }
+  // if(isSpaceInName(first_name))
+  // {
+  //   alert("Don't Use Spaces In Name")
+  //   return true;
+  // }
+
 }
 
 
@@ -210,7 +231,7 @@ export default function Form({togObj, navbarObj}) {
                   <option>IndiGo</option>
                   <option>Air India</option>
                   <option>Vistara</option>
-                  <option>Jet Airways</option>
+                  <option>JetAirways</option>
                 </select>
               </div>
             </div>
