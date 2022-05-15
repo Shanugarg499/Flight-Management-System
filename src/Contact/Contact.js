@@ -10,7 +10,7 @@ function Contact() {
       <div className="about-top">
         <div className="meet-team">
           <h1 className="about-h1">
-            <strong> Meet the Team </strong>
+            <strong1><b> Meet the Team </b></strong1>
           </h1>
         </div>
 

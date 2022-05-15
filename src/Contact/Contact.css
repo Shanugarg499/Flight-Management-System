@@ -93,3 +93,17 @@
     }
 
 }
+
+strong1 {
+
+    color: white;
+ animation-name: example;
+ animation-duration: 8s;
+}
+
+@keyframes example {
+ 0%   {color: red;}
+ 25%  {color: yellow;}
+ 50%  {color: blue;}
+ 100% {color: green;}
+}
