@@ -9,8 +9,7 @@ async function validateuser(username, pass) {
     const snapShot = await db.collection("user_register").get();
     snapShot.docs.forEach(doc => {
         if(doc.data()["username"] === username && doc.data()['password'] === pass) {
-            var cookie = document.cookie;
-            document.cookie = cookie + username+"T";
+            localStorage.setItem("cuser", username);
             return;
         } 
     });
@@ -23,15 +22,19 @@ const Login = () => {
     const [username, setUsername] = useState("");
     
     const handleSubmit = (e) => {
-        e.preventDefault();
-        validateuser();
-        var cookie = document.cookie;
-        if(cookie.indexOf(username+'T') !== -1) {
-            alert("You have logged in successfully");
-        } else {
-            alert("Invalid credentials"+username+password);
-            console.log(username);
-            console.log(password);
+        try{
+          e.preventDefault();
+          setTimeout(validateuser(username, password), 3000);
+          // validateuser(username, password);
+          if(localStorage.getItem("cuser") == username) {
+              alert("You have entered successfully");
+              localStorage.setItem("Userallowed", true);
+              localStorage.setItem("flag", 0);
+          } else {
+            alert("user checked successfully. Press Login button again to enter. If you're unable to enter then you entered wrong credentials.");
+          }
+        } catch (err) {
+          alert("Error with DB. Please try later.");
         }
     }
 

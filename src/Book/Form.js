@@ -4,8 +4,6 @@ import {sleep} from '../utils/funs';
 import * as rb from 'react-bootstrap';
 import './form.css';
 
-
-
 var isinvalidevent = (first_name, gender, age, from, to, date , class1, flight, email, mobile) => {
   if(first_name === '' || gender === '' || age === '' || from === '' || to ==='' || date === '' || class1 === '' || flight === '' || flight === '' || email === '' || mobile === '') {
     alert("Required fields can't be empty");
@@ -19,7 +17,7 @@ var isinvalidevent = (first_name, gender, age, from, to, date , class1, flight, 
 }
 
 
-export default function Form({togObj, navbarObj, pnrObj}) { 
+export default function Form({togObj, navbarObj}) { 
   // console.log(params[1]);
     const [first_name, setName1] = useState("");
     const [last_name, setName2] = useState("");
@@ -35,6 +33,12 @@ export default function Form({togObj, navbarObj, pnrObj}) {
     
     const handleSubmit = (e) => {
       e.preventDefault();
+
+      if(localStorage.getItem("Userallowed") == "false") {
+        alert("You can't book a ticket until you log in.");
+        return;
+      }
+
       console.log("validating event");
   
       if(isinvalidevent(first_name, gender, age, from, to, date , class1, flight, email, mobile)) {

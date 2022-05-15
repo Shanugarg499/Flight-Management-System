@@ -59,7 +59,7 @@ function Register() {
           name, password, username, mobile
         })
         .then(() => {
-          alert("Thanks For Registring");
+          alert("Thanks For Registring. Please, reload before login.");
         })
         .catch((error) => {
           alert(error.message);
