@@ -34,14 +34,20 @@ async function printTicketInfo(pnrNum) {
     }
   }
 
-const Status = () => {
+  
+
+const Status = ({pageObj}) => {
 
     const [pnrNum, setPNR] = useState('');
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log('inside submit');
-        printTicketInfo(pnrNum);
+        var thatObj = {pageObj};
+        var pageFun = thatObj.pageObj.current;
+        localStorage.setItem("currPNR", pnrNum);
+        pageFun('PNR');
+
+        // printTicketInfo(pnrNum);
     }
 
     return (

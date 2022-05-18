@@ -7,6 +7,7 @@ import Status from './Status/Status';
 import Contact from './Contact/Contact';
 import Login from './Login/Login';
 import Register from './Register/Register';
+import Pnr from './Pnr/Pnr';
 // import ticket from './Ticket/ticket';
 
 
@@ -15,6 +16,7 @@ function App() {
   const[active, setActive] = useState('Home');
   const [type, setType] = useState("Navbar");
   const typeRef = useRef(setType);
+  const pageRef = useRef(setActive);
   
   // setActive('Home')
   return (
@@ -40,7 +42,7 @@ function App() {
 
       {active === 'Home' && <Home />}
       {active === 'Book' && <Book typeObj={typeRef} />}
-      {active === 'Status' && <Status />}
+      {active === 'Status' && <Status pageObj={pageRef}/>}
       {active === 'PNR' && <Pnr/>}
       {active === 'Contact' && <Contact />}
       {active === 'Login' && <Login />}
