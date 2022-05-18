@@ -41,6 +41,7 @@ function App() {
       {active === 'Home' && <Home />}
       {active === 'Book' && <Book typeObj={typeRef} />}
       {active === 'Status' && <Status />}
+      {active === 'PNR' && <Pnr/>}
       {active === 'Contact' && <Contact />}
       {active === 'Login' && <Login />}
       {active === 'Register' && <Register />}

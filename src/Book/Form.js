@@ -24,7 +24,7 @@ var isinvalidevent = (first_name, gender, age, from, to, date , class1, flight, 
     alert("Source and Destination are not same");
     return true;
   }
-  if(flight !="JetAirways") 
+  if(flight !="Jet Airways") 
   {
     alert("Flights Not Available");
     return true;
@@ -160,7 +160,7 @@ export default function Form({togObj, navbarObj}) {
                 }
                  >
                   <option selected>Choose...</option>
-                  <option>New Delhi</option>
+                  <option>Delhi</option>
                   <option>Mumbai</option>
                   <option>Bangalore</option>
                   <option>Hyderabad</option>
@@ -178,7 +178,7 @@ export default function Form({togObj, navbarObj}) {
                 }
                 >
                   <option selected>Choose...</option>
-                  <option>New Delhi</option>
+                  <option>Delhi</option>
                   <option>Mumbai</option>
                   <option>Bangalore</option>
                   <option>Hyderabad</option>
@@ -231,7 +231,7 @@ export default function Form({togObj, navbarObj}) {
                   <option>IndiGo</option>
                   <option>Air India</option>
                   <option>Vistara</option>
-                  <option>JetAirways</option>
+                  <option>Jet Airways</option>
                 </select>
               </div>
             </div>

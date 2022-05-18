@@ -20,7 +20,7 @@ const storePrice = async (from, to, flight, standard) => {
     })
   } catch (error) {
     localStorage.setItem('price', 'Flight not available');
-    alert("error");
+    alert(error);
     console.log("store failed");
   }
 }
