@@ -21,7 +21,7 @@ export default async function Pnr() {
   // const[toshow, setShow] = useState('no');
   // LoadData();
   // var info = `<div>status of PNR: ${localStorage.getItem("currPNR")} is:<br/><br/>${localStorage.getItem("datareceived")};</div>`;
-  alert(`You'll get status of PNR ${locaStorage.getItem("currPNR")}`);
+  alert(`You'll get status of PNR ${localStorage.getItem("currPNR")}`);
   return (
     <>
     {/* <button onClick={() => {setShow('yes')}}>SHOW</button> */}
