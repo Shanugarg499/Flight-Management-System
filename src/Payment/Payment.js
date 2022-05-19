@@ -7,6 +7,8 @@ import Ticket from '../Ticket/ticket';
 import { db } from "../utils/firebase";
 import {sleep} from "../utils/funs";
 
+var price = localStorage.getItem('price')
+
 const storePrice = async (from, to, flight, standard) => {
   const snapShot = await db.collection("Fares").get();
   try {
@@ -71,7 +73,7 @@ export default function Payment({obj, navbarObj, pnrObj}) {
               console.log(error);
             });
             var checkoutToTicket = {obj}.obj.current; checkoutToTicket('Ticket');
-            }} >Check Payment</button>
+            }} >Check Payment of ₹{price}</button>
 </div>
         </div>
     </>

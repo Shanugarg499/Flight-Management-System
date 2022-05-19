@@ -4,15 +4,6 @@ import {sleep} from '../utils/funs';
 import * as rb from 'react-bootstrap';
 import './form.css';
 
-var isSpaceInName = (name)=>
-{
-  for(var i=0;name[i]!='\0';i++)
-  {
-    if(name[i]== ' ') return true;
-  }
-  return false;
-}
-
 
 var isinvalidevent = (first_name, gender, age, from, to, date , class1, flight, email, mobile) => {
   if(first_name === '' || gender === '' || age === '' || from === '' || to ==='' || date === '' || class1 === '' || flight === '' || flight === '' || email === '' || mobile === '') {
@@ -21,9 +12,10 @@ var isinvalidevent = (first_name, gender, age, from, to, date , class1, flight, 
   }
   if(from === to)
   {
-    alert("Source and Destination are not same");
+    alert("Source and Destination are same");
     return true;
   }
+<<<<<<< Updated upstream
   if(flight !="Jet Airways") 
   {
     alert("Flights Not Available");
@@ -35,6 +27,8 @@ var isinvalidevent = (first_name, gender, age, from, to, date , class1, flight, 
   //   return true;
   // }
 
+=======
+>>>>>>> Stashed changes
 }
 
 
