@@ -18,13 +18,14 @@ async function LoadData() {
 
 export default async function Pnr() {
   
-  const[toshow, setShow] = useState('no');
-  LoadData();
-  var info = `<div>status of PNR: ${localStorage.getItem("currPNR")} is:<br/><br/>${localStorage.getItem("datareceived")};</div>`;
+  // const[toshow, setShow] = useState('no');
+  // LoadData();
+  // var info = `<div>status of PNR: ${localStorage.getItem("currPNR")} is:<br/><br/>${localStorage.getItem("datareceived")};</div>`;
+  alert(`You'll get status of PNR ${locaStorage.getItem("currPNR")}`);
   return (
     <>
-    <button onClick={() => {setShow('yes')}}>SHOW</button>
-    {info}
+    {/* <button onClick={() => {setShow('yes')}}>SHOW</button> */}
+    This page is currently deactive due to unclear structure of seating plan. Your tickets are confirmed btw.
     </>
   )
 }
