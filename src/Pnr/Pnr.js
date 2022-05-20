@@ -16,7 +16,7 @@ async function LoadData() {
       }
 }
 
-export default async function Pnr() {
+export default function Pnr() {
   
   // const[toshow, setShow] = useState('no');
   // LoadData();

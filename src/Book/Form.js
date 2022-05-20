@@ -15,7 +15,6 @@ var isinvalidevent = (first_name, gender, age, from, to, date , class1, flight, 
     alert("Source and Destination are same");
     return true;
   }
-<<<<<<< Updated upstream
   if(flight !="Jet Airways") 
   {
     alert("Flights Not Available");
@@ -27,8 +26,6 @@ var isinvalidevent = (first_name, gender, age, from, to, date , class1, flight, 
   //   return true;
   // }
 
-=======
->>>>>>> Stashed changes
 }
 
 
